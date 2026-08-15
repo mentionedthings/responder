@@ -2,7 +2,9 @@ name = "fb-ai-comment-responder"
 main = "src/index.js"
 compatibility_date = "2024-09-25"
 
-# Bind your KV namespace for deduplication & rate limiting
+# ADD THIS LINE - tells Pages this is a Worker, not a framework app
+pages_build_output_dir = ""
+
 [[kv_namespaces]]
 binding = "FB_COMMENT_CACHE"
 id = "YOUR_KV_NAMESPACE_ID_HERE"
